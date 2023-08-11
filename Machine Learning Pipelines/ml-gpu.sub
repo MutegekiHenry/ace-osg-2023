@@ -1,0 +1,16 @@
+universe = container
+container_image = ml-gpu-container.sif
+executable = ml_triage.py
+
+output = ml_triage_gpu.out
+error = ml_triage_gpu.err
+log = ml_triage_gpu.log
+
+request_cpus = 5
+request_memory = 20GB
+request_disk = 5GB
+request_gpus = 1
+
+transfer_input_files = triage_data.csv
+
+queue
