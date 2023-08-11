@@ -1,0 +1,16 @@
+universe = container
+container_image = ml-dt-fin-container.sif
+executable = ml_triage.py
+
+output = ml_triage.out
+error = ml_triage.err
+log = ml_triage.log
+
+request_cpus = 12
+request_memory = 20GB
+request_disk = 5GB
+
+transfer_input_files = triage_data.csv
+#transfer_output_files = confusion_matrix.png
+
+queue

@@ -1,0 +1,21 @@
+Bootstrap: docker
+From: opensciencegrid/tensorflow-gpu:latest
+
+%post
+    apt-get update -y
+    apt-get install -y \
+            build-essential \
+            cmake \
+            g++ \
+            r-base-dev
+    apt-get install -y \
+            python3-pip \
+            python3-numpy
+
+    python3 -m pip install pandas \
+                           matplotlib \
+                           seaborn \
+                           xgboost \
+                           sklearn \
+                           imblearn \
+                           numpy
